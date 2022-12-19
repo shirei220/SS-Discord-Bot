@@ -9,6 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "engines" : { 
+    "node" : ">=16.0.0"
+  },
   "dependencies": {
     "discord.js": "^14.7.1"
   }
