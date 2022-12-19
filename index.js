@@ -1,7 +1,7 @@
 //imports
 const fs = require('fs');
 const path = require('path');
-const { Client, Collection, GatewayIntentBits, Partials } = require('discord.js');
+const { Client, Collection, Events, GatewayIntentBits, Partials } = require('discord.js');
 const { token } = require('./config.json');
 
 //create new client
