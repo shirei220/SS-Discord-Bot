@@ -7,7 +7,7 @@ module.exports = {
 		let content = msg.content;
 
 		//check if user is certain someone and has a certain word
-		if (msg.author.tag == certainUser && content.test(/sorry/i)) {
+		if (msg.author.tag == certainUser && /sorry/i.test(content)) {
 			const options = ['wHaT WaS THAT?!?', 'NO S-WORDS ALLOWED!!!'];
 			const randomIndex = Math.floor(Math.random() * options.length);
 			msg.reply(options[randomIndex]);
