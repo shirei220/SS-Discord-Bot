@@ -17,10 +17,14 @@ module.exports = {
 		if (/[0-9]!/.test(content)) {
 			function factorial(match) {
 				let temp = parseInt(match.split('!')[0]); //removes ! and converts to int
-				let ans = 1;
-				for (let i = 2; i <= temp; i++)
-					ans = ans * i;
-				return ans.toString();
+				if (temp < 100) {
+					let ans = 1;
+					for (let i = 2; i <= temp; i++)
+						ans = ans * i;
+					return BigInt(ans).toString();
+				} else {
+					return "very big number";
+				}
 			}
 			msg.reply(content.replaceAll(/[0-9][0-9]*!/g, factorial));
 		}
